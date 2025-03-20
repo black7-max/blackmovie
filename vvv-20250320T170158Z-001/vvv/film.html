@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music</title>
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            margin-left: 10px;
+        }
+
+        .video-row {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        .video-row::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome */
+        }
+
+        .video-item {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 140px;
+            background-color: black;
+            border-radius: 8px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .video-item:hover {
+            transform: scale(1.1);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1{
+            text-align: center;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>the best music </h1>
+    < href="form.html">login</a>
+
+
+<div class="container">
+    <h2>Trending Now</h2>
+    <div class="video-row">
+        <div class="video-item">
+            <video src="Element EleéeH - FOU DE TOi Feat Ross Kana_ Bruce Melodie (Official Video)(1080P_HD) - Copy.mp4" muted loop autoplay></video>
+        </div>
+        <div class="video-item">
+            <video src="DO ME _  Bwiza  - Official  Music Video(1080P_HD).mp4" muted loop autoplay></video>
+        </div>
+        <div class="video-item">
+            <a href="dome.html"><video src="DO ME _  Bwiza  - Official  Music Video(1080P_HD).mp4" muted loop autoplay></a>
+        </div>
+        <div class="video-item">
+            <video src="C:\Users\Utilisateur\OneDrive\Desktop\songs\Lewis capaldi - Before You Go (Lyrics)(480P).mp4" muted loop autoplay></video>
+        </div>
+        <div class="video-item">
+            <video src="C:\Users\Utilisateur\OneDrive\Desktop\songs\Joeboy - Sip (Alcohol) [Official Music Video](4K_HD).webm" muted loop autoplay></video>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

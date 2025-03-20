@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>black-home</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Watermark styling */
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 10;
+            border-radius: 5px;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>🎵 blackApp</h2>
+        <ul>
+            <li><a href="music.html">🏠 ahabanza</a></li>
+            <li><a href="tranding.html">🔥 izigezweho</a></li>
+            <li><a href="#">🎶 igitabo</a></li>
+            <li><a href="#">📀 Albums</a></li>
+            <li><a href="#">⭐ gukunda</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to blackApp 🎧</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" class="searchBar" placeholder="Search for music..." onkeyup="searchMusic()">
+        
+        <h2>Featured Playlists</h2>
+        <div class="playlist-container" id="playlistContainer">
+            <div class="playlist image-container">
+                <a href="anabela.html"><img src="music1.jpg" alt="Playlist 1"></a>
+                <p>new music</p>
+            </div>
+            <div class="playlist image-container">
+                <a href="Lewis capaldi - Before You Go (Lyrics)(480P).mp4"><img src="music2.jpg" alt="Playlist 2"></a>
+                <p>Chill Vibes</p>
+            </div>
+            <div class="playlist image-container">
+                <a href="Older (Drill Remix) By dekingbeatz - Dekingbeatz (720p, h264).mp4"><img src="music1.jpg" alt="Playlist 3"></a>
+                <p>Older drill</p>
+            </div>
+        </div>
+
+        <h2>Trending Now</h2>
+        <div class="trending" id="trendingContainer">
+            <div class="song image-container">
+                <img src="music2.jpg" alt="Song 1">
+                <p>alan walker music</p>
+            </div>
+            <div class="song image-container">
+                <img src="music2.jpg" alt="Song 2">
+                <p>bruce merody</p>
+            </div>
+            <div class="song image-container">
+                <img src="music1.jpg" alt="Song 3">
+                <p>bruno mass</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchMusic() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let playlists = document.getElementsByClassName('playlist');
+            let songs = document.getElementsByClassName('song');
+
+            // Filter Playlists
+            for (let i = 0; i < playlists.length; i++) {
+                let text = playlists[i].innerText.toLowerCase();
+                playlists[i].style.display = text.includes(input) ? "" : "none";
+            }
+
+            // Filter Songs
+            for (let i = 0; i < songs.length; i++) {
+                let text = songs[i].innerText.toLowerCase();
+                songs[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+
+        // Add watermark to all images
+        document.addEventListener("DOMContentLoaded", function () {
+            let images = document.querySelectorAll("img");
+            images.forEach(image => {
+                let watermark = document.createElement("div");
+                watermark.className = "watermark";
+                watermark.innerText = "BLACKMUSIC";
+                image.parentElement.style.position = "left corner"; // Ensure parent is relative
+                image.parentElement.appendChild(watermark);
+            });
+        });
+    </script>
+
+</body>
+</html>

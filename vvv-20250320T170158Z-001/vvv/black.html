@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>black</title>
+	<link rel="stylesheet" href="style.css">
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var loadingMessage = document.getElementById("loading");
+
+            if (username === "black" && password === "1234567890") {
+                loader.style.display = "block"; // Show loader
+                
+                setTimeout(function () {
+                    window.location.href = "music.html"; // Redirect after delay
+                }, 2000);
+                window.location.href = "music.html"; // Redirect to another page
+            } else {
+                alert("fuck you get out  your computer is hacked");
+                window.location.href = "fuck.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+	<div class="box">
+		<h2>Login</h2>
+		<form onsubmit="validateLogin(event)">
+			<div class="inputBox">
+				<input type="text" id="username" required="">
+				<label for="">Username</label>
+			</div>
+			<div class="inputBox">
+				<input type="password" id="password" required="">
+				<label for="">Password</label>
+			</div>
+            <a href="password">forgot/password</a><br><br>
+            
+			<input type="submit"  value="LOGIN">
+		</form>
+        
+
+	</div>
+    <div id="loader"></div>
+</body>
+</html>
